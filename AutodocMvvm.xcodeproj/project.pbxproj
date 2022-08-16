@@ -16,6 +16,9 @@
 		1D04115E28ABCD160044051D /* AutodocMvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04115D28ABCD160044051D /* AutodocMvvmTests.swift */; };
 		1D04116828ABCD160044051D /* AutodocMvvmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04116728ABCD160044051D /* AutodocMvvmUITests.swift */; };
 		1D04116A28ABCD160044051D /* AutodocMvvmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04116928ABCD160044051D /* AutodocMvvmUITestsLaunchTests.swift */; };
+		1D04117B28ABCD7A0044051D /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04117A28ABCD7A0044051D /* News.swift */; };
+		1D04117D28ABCE6E0044051D /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04117C28ABCE6E0044051D /* NewsViewModel.swift */; };
+		1D04118028ABCEDF0044051D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04117F28ABCEDF0044051D /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		1D04116328ABCD160044051D /* AutodocMvvmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutodocMvvmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D04116728ABCD160044051D /* AutodocMvvmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutodocMvvmUITests.swift; sourceTree = "<group>"; };
 		1D04116928ABCD160044051D /* AutodocMvvmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutodocMvvmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1D04117A28ABCD7A0044051D /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		1D04117C28ABCE6E0044051D /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		1D04117F28ABCEDF0044051D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,12 @@
 		1D04114528ABCD130044051D /* AutodocMvvm */ = {
 			isa = PBXGroup;
 			children = (
+				1D04117E28ABCED10044051D /* Service */,
+				1D04117928ABCD660044051D /* Model */,
+				1D04117828ABCD5A0044051D /* View */,
+				1D04117628ABCD4B0044051D /* ViewModel */,
 				1D04114628ABCD130044051D /* AppDelegate.swift */,
 				1D04114828ABCD130044051D /* SceneDelegate.swift */,
-				1D04114A28ABCD130044051D /* ViewController.swift */,
 				1D04114C28ABCD130044051D /* Main.storyboard */,
 				1D04114F28ABCD160044051D /* Assets.xcassets */,
 				1D04115128ABCD160044051D /* LaunchScreen.storyboard */,
@@ -125,6 +134,38 @@
 				1D04116928ABCD160044051D /* AutodocMvvmUITestsLaunchTests.swift */,
 			);
 			path = AutodocMvvmUITests;
+			sourceTree = "<group>";
+		};
+		1D04117628ABCD4B0044051D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D04117C28ABCE6E0044051D /* NewsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D04117828ABCD5A0044051D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D04114A28ABCD130044051D /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D04117928ABCD660044051D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D04117A28ABCD7A0044051D /* News.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D04117E28ABCED10044051D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1D04117F28ABCEDF0044051D /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +301,10 @@
 			files = (
 				1D04114B28ABCD130044051D /* ViewController.swift in Sources */,
 				1D04114728ABCD130044051D /* AppDelegate.swift in Sources */,
+				1D04117D28ABCE6E0044051D /* NewsViewModel.swift in Sources */,
+				1D04117B28ABCD7A0044051D /* News.swift in Sources */,
 				1D04114928ABCD130044051D /* SceneDelegate.swift in Sources */,
+				1D04118028ABCEDF0044051D /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
