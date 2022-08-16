@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController {
     
     
     @IBOutlet weak var label: UILabel!
@@ -74,8 +74,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    
 
+}
+
+
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return news.news!.count
@@ -96,7 +102,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
-
 }
 
 
