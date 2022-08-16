@@ -15,14 +15,14 @@ class NewsViewModel {
     
     enum Input {
       case viewDidLoad
-      //case refreshButtonDidTap
     }
     
     enum Output {
       case fetchNewsDidFail(error: Error)
       case fetchNewsDidSucceed(news: Welcome)
-      //case toggleButton(isEnabled: Bool)
     }
+    
+    
     
     
     
