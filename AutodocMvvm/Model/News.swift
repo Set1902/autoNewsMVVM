@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Welcome
-class Welcome: Decodable {
+struct Welcome: Decodable {
     var news: [News]?
     var totalCount: Int?
 
@@ -16,7 +16,7 @@ class Welcome: Decodable {
 }
 
 // MARK: - News
-class News: Decodable {
+struct News: Decodable {
     var id: Int?
     var title, newsDescription, publishedDate, url: String?
     var fullURL: String?
