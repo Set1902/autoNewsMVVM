@@ -28,12 +28,6 @@ class ViewController: UIViewController {
         bind()
         input.send(.viewDidLoad)
     }
-    
-    //override func viewDidAppear(_ animated: Bool) {
-    //  super.viewDidAppear(animated)
-     // input.send(.viewDidAppear)
-   // }
-    
 
     
     private func bind() {
@@ -46,11 +40,8 @@ class ViewController: UIViewController {
           .sink { [weak self] event in
           switch event {
           case .fetchNewsDidSucceed(let news):
-              //self?.news = news
               self?.updateUI(with: news)
               self?.label.text = String(news.totalCount!)
-          
-              //self?.updateUI(with: news)
           case .fetchNewsDidFail(let error):
               self?.errorr(with: error)
           }
@@ -75,6 +66,27 @@ class ViewController: UIViewController {
     }
     
 
+}
+
+extension ViewController {
+    @IBAction func unwindToNews(unwindSegue: UIStoryboardSegue) {
+        
+    }
+}
+
+
+
+extension ViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "Show" else {return}
+        
+        let navController = segue.destination as! UINavigationController
+        
+       let newsViewController = navController.topViewController as! DetailViewController
+        guard let newIndexPath = TableView.indexPathForSelectedRow else {return}
+        let selectednews: News = news.news![newIndexPath.row]
+       newsViewController.news = selectednews
+    }
 }
 
 
