@@ -10,9 +10,12 @@ import Combine
 import UIKit
 protocol ServiceProtocol {
     func getNews() -> AnyPublisher<Welcome, Error>
+
 }
 
 class Sevice: ServiceProtocol {
+
+    
     func getNews() -> AnyPublisher<Welcome, Error> {
       let url = URL(string: "https://webapi.autodoc.ru/api/news/1/15")
       return URLSession.shared.dataTaskPublisher(for: url!)

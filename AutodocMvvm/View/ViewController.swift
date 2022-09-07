@@ -41,7 +41,6 @@ class ViewController: UIViewController {
           switch event {
           case .fetchNewsDidSucceed(let news):
               self?.updateUI(with: news)
-              self?.label.text = String(news.totalCount!)
           case .fetchNewsDidFail(let error):
               self?.errorr(with: error)
           }
